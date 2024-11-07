@@ -131,3 +131,10 @@ git commit -m "feat: update database"
 ./number_guess.sh
 git add .
 git commit -m "fix: change database read commands to fix issues with original loop"
+pg_dump -cC --insets -U freecodecamp guessing_game > number_guess.sql
+pg_dump -cC --inserts -U freecodecamp guessing_game > number_guess.sql
+git remote add origin https://github.com/SomeColorMage/number-guessing-game.git
+git remote set-url origin https://github.com/SomeColorMage/number-guessing-game.git
+git status
+git push -u origin main
+git add .
